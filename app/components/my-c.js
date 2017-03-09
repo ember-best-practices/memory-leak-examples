@@ -19,7 +19,8 @@ export default Ember.Component.extend({
       return SOME_STRING;
     };
 
-    setTimeout(() => console.log('5 minutes have passed'), 60 * 1000 * 5)
+    // eslint-disable-next-line no-console
+    setTimeout(() => console.log('5 minutes have passed'), 60 * 1000 * 5);
   },
 
   didScroll() {
@@ -28,7 +29,7 @@ export default Ember.Component.extend({
     this.incrementProperty('scrollCount');
     LAST_COMPONENT = this;
 
-    SCROLL_COUNTER.get(this).count++;
+    SCROLL_COUNTER.get(LAST_COMPONENT).count++;
   },
 
   didInsertElement() {
