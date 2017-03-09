@@ -1,12 +1,12 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'memory-leak-examples/tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | components');
+moduleForAcceptance('Acceptance | main');
 
-test('visiting /components', function(assert) {
-  visit('/components');
+test('visiting /', function(assert) {
+  visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/components');
+    assert.equal(currentURL(), '/');
   });
 });
