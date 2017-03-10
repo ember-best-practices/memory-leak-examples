@@ -1,4 +1,6 @@
-Hello, <strong>{{format-name model.user}}</strong>.
+{{#link-to 'index'}}Home{{/link-to}}
+
+Hello, {{#link-to 'profile'}}{{format-name model.user}}{{/link-to}}.
 
 {{current-route}}
 
