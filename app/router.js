@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('components');
+  this.route('profile');
 });
 
 export default Router;

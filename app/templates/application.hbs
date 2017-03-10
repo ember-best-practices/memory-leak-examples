@@ -1,2 +1,19 @@
-{{#link-to 'components'}}Components Example {{/link-to}}
+{{#link-to 'index'}}Home{{/link-to}}
+
+Hello, {{#link-to 'profile'}}{{format-name model.user}}{{/link-to}}.
+
+{{current-route}}
+
 {{outlet}}
+
+{{scrollDistance}}
+
+{{#list-view onScroll=(action 'onScroll') items=model.updates as |update|}}
+  <header>
+    <p>
+      <strong>{{format-name update.user}}</strong>
+    </p>
+  </header>
+
+  <p>{{update.body}}</p>
+{{/list-view}}
