@@ -42,5 +42,8 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.3.2"
+  }
 }
