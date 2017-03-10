@@ -1,5 +1,17 @@
-Hello, <strong>{{format-name model}}</strong>.
+Hello, <strong>{{format-name model.user}}</strong>.
 
 {{current-route}}
 
 {{outlet}}
+
+{{scrollDistance}}
+
+{{#list-view onScroll=(action 'onScroll') items=model.updates as |update|}}
+  <header>
+    <p>
+      <strong>{{format-name update.user}}</strong>
+    </p>
+  </header>
+
+  <p>{{update.body}}</p>
+{{/list-view}}
