@@ -14,5 +14,11 @@ export default Ember.Controller.extend({
 
     // Save the application controller for use with other things
     this.get('storage').set('application-controller', this);
+  },
+
+  actions: {
+    onScroll() {
+      this.set('scrollDistance', window.scrollY);
+    }
   }
 });
