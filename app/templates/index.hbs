@@ -1,0 +1,11 @@
+<progress class="progress is-primary" value="{{scrollDistance}}" max="{{scrollMax}}">{{scrollDistance}}%</progress>
+
+{{#list-view onScroll=(action 'onScroll') items=model.updates as |update|}}
+  <header>
+    <p>
+      {{#link-to 'profile' update.user.id}}{{format-name update.user}}{{/link-to}}
+    </p>
+  </header>
+
+  <p>{{update.body}}</p>
+{{/list-view}}

@@ -1,21 +1,36 @@
-<h1>
-  {{#link-to 'index'}}Home{{/link-to}}
-</h1>
+<header class="hero is-primary">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          {{#link-to 'index' class="nav-item is-active"}}Ups{{/link-to}}
+        </div>
 
-Hello, {{#link-to 'profile'}}{{format-name model.user}}{{/link-to}}.
+        <div class="nav-right nav-menu">
+          {{#link-to 'index' class="nav-item" activeClass="is-active"}}Home{{/link-to}}
+          {{#link-to 'profile' model.user class="nav-item" activeClass="is-active"}}Profile{{/link-to}}
+        </div>
+      </div>
+    </header>
+  </div>
 
-{{current-route}}
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Hello, {{#link-to 'profile' model.user.id}}{{format-name model.user}}{{/link-to}}.
+      </h1>
+    </div>
+  </div>
+</header>
 
-{{outlet}}
+<div class="section">
+  <div class="container">
+    <div class="heading">
+      {{current-route}}
+    </div>
 
-{{scrollDistance}}
+    {{outlet}}
+  </div>
+</div>
 
-{{#list-view onScroll=(action 'onScroll') items=model.updates as |update|}}
-  <header>
-    <p>
-      <strong>{{format-name update.user}}</strong>
-    </p>
-  </header>
-
-  <p>{{update.body}}</p>
-{{/list-view}}
