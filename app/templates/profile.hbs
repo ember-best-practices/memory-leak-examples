@@ -1,1 +1,5 @@
-{{outlet}}
+<h2 class="title">{{format-name model}}</h2>
+
+{{#list-view items=model.updates as |update|}}
+  <p>{{update.body}}</p>
+{{/list-view}}
