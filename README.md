@@ -1,52 +1,25 @@
-# memory-leak-examples
+# Memory Leak Examples
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple training application to help you get comfortable finding memory leaks and fixing them in the context of an actual web application. While this application is an [Ember](http://emberjs.com/) app, there is little in this training that is specific to Ember and pre-requisite knowledge of Ember is not required in order to do any of the exercises provided.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your computer in order to get the application up and running and to work through the exercises:
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [Chrome Canary](https://www.google.com/chrome/browser/canary.html) (_optional_)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+Once you have the prerequisites setup on your machine, you can install this applications and its dependencies with the following commands:
+
+* `git clone https://github.com/ember-best-practices/memory-leak-examples.git`
 * `cd memory-leak-examples`
-* `npm install`
-* `bower install`
+* `yarn install`
 
-## Running / Development
+## Exercises
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+After completing installation, jump into the [`exercises` directory](./exercises/exercise-0.md). From there, just read through the exercises in order and you should do just fine. Good luck!
