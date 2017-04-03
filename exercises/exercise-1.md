@@ -169,3 +169,5 @@ and verify that the memory leak is no longer present.
 leaking
 * Do _NOT_ set non-primitive values on a class' `prototype`. Instead, initialize
 them during the class' instantiation.
+
+[Prev: Exercise #0](./exercise-0.md) | [Next: Exercise #2](./exercise-2.md)
