@@ -113,4 +113,4 @@ before. To dig into that, we'll move to the next exercise.
 * Sometimes memory leaks just by being in context/scope of a retained function
 * There may be more than one thing leaking a given object
 
-[Prev: Exercise #1](./exercise-1.md)
+[Prev: Exercise #1](./exercise-1.md) | [Next: Exercise #3](./exercise-3.md)
