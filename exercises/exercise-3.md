@@ -114,4 +114,4 @@ So, with that you should have successfully fixed all the leaks in this test.
 * To fix scope leaks, extract closure creation into functions with just the
   right amount of state in scope.
 
-[Prev: Exercise #2](./exercise-2.md)
+[Prev: Exercise #2](./exercise-2.md) | [Next: Exercise #4](./exercise-4.md)
