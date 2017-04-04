@@ -62,4 +62,4 @@ if (cache.gey(ket)) {
 * Be wary of placing state in module scope
 * Favor primitive values over references when possible
 
-[Prev: Exercise #3](./exercise-3.md)
+[Prev: Exercise #3](./exercise-3.md) | [Next: Exercise #5](./exercise-5.md)
