@@ -18,7 +18,9 @@ Once you have the prerequisites setup on your machine, you can install this appl
 
 * `git clone https://github.com/ember-best-practices/memory-leak-examples.git`
 * `cd memory-leak-examples`
-* `yarn install`
+* `yarn install`*
+
+*_Note: Yarn is used to ensure that dependencies (including nested dependencies) are locked to a specific version. You can use `npm install`, but the results of the exercises may vary._
 
 ## Exercises
 
