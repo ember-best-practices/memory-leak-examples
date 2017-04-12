@@ -1,4 +1,4 @@
-# Memory Leak Examples
+# Memory Leak Examples [![Build Status](https://travis-ci.org/ember-best-practices/memory-leak-examples.svg?branch=master)](https://travis-ci.org/ember-best-practices/memory-leak-examples)
 
 This is a simple training application to help you get comfortable finding memory leaks and fixing them in the context of an actual web application. While this application is an [Ember](http://emberjs.com/) app, there is little in this training that is specific to Ember and pre-requisite knowledge of Ember is not required in order to do any of the exercises provided.
 
