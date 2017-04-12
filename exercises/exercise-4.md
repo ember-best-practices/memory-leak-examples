@@ -53,7 +53,7 @@ as our key instead:
 
 ```js
 let key = userObj.foo + userObj.bar;
-if (cache.gey(ket)) {
+if (cache.get(key)) {
   // ...
 ```
 
