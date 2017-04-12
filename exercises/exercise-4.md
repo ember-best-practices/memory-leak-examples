@@ -28,7 +28,7 @@ export default function complexTask(userObj) {
 
 In the above, any value that is ever stored in `cache` will be retained forever.
 This is because once a JS module is evaluated, the code remains in memory
-indefinitely. This is similar to the "scope" leaks in that it is a by-product of
+indefinitely. This is similar to the "scope" leak in that it is a by-product of
 the exported function having closed over the scope in which `cache` is defined.
 
 So, how does one fix a leak like this? Well, we have several options.
@@ -59,7 +59,7 @@ if (cache.gey(ket)) {
 
 ## Key Takeaways
 
-* Be wary of placing state in module scope
-* Favor primitive values over references when possible
+* Be wary of placing state in module scope.
+* Favor primitive values over references when possible.
 
 [Prev: Exercise #3](./exercise-3.md) | [Next: Exercise #5](./exercise-5.md)

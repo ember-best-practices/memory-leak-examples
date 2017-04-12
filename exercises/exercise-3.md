@@ -109,7 +109,7 @@ So, with that you should have successfully fixed all the leaks in this test.
 * Don't assume a fix actually fixed a leak until verification occurs.
 * Be wary of transpilation side-effects. While Babel and others do well in most
   circumstances, they can indirectly cause issues.
-* Scope leaks occurs just by having access to variables in scope, even if
+* Scope leaks occur just by having access to variables in scope, even if
   they're not used.
 * To fix scope leaks, extract closure creation into functions with just the
   right amount of state in scope.

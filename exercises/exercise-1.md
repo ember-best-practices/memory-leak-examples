@@ -26,7 +26,7 @@ any code.
 > memory leak, verify it before changing existing code, especially if the
 > changes will increase complexity.
 
-The first thing we want to do, is open up our memory profiler. We do this by
+The first thing we want to do is open up our memory profiler. We do this by
 opening the Chrome Developer Tools (`Ctrl + Shift + I` on Windows,
 `Cmd + Opt + I` on Mac) and selecting the "Profiles" tab.
 
@@ -46,7 +46,7 @@ using memory over the course of our test run.
 
 It's pretty simple. From the test page, click "Start" to begin recording,
 reload the page, and then hit the red recording button to stop when the tasks
-you are concerned with finish, in our case that would be after the test finishes.
+you are concerned with finish; in our case that would be after the test finishes.
 
 ![Using the record allocation timeline feature](./images/exercise-1/record-allocation-timeline.gif)
 
@@ -61,7 +61,7 @@ the blue is memory that is still being retained.
 
 For applications with memory leaks, you will see many blue columns when
 recording over long periods of time. The cumulative effect of all this retained
-memory would be a leak that impacts performance of your application.
+memory would be a leak that impacts the performance of your application.
 
 A quick word of warning here, _not all retained memory is due to leaks_.
 Sometimes retained memory is simply made up of new function definitions,
@@ -86,7 +86,7 @@ for our application (or test) and thus, if it is not cleaned up, we're going
 to use up memory very quickly.
 
 Thankfully, since we know what might be leaking, we can check for it easily. We
-can take a "heap snapshot" at any point in time, to see what memory is
+can take a "heap snapshot" at any point in time to see what memory is
 currently being used. Simply choose "Take Heap Snapshot" as the profiling type
 and then click the "record" button.
 
@@ -164,9 +164,9 @@ and verify that the memory leak is no longer present.
 
 ## Key Takeaways
 
-* Use "Record Allocation Timeline" to identify the presence of memory leaks
+* Use "Record Allocation Timeline" to identify the presence of memory leaks.
 * Use "Take Heap Snapshot" to verify leaked objects and figure out why they're
-leaking
+leaking.
 * Do _NOT_ set non-primitive values on a class' `prototype`. Instead, initialize
 them during the class' instantiation.
 

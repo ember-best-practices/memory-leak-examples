@@ -13,6 +13,6 @@ everything on your own before taking a look.
 
 ## Key Takeaways
 
-* You can successfully fix memory leaks in an Ember application without help
+* You can successfully fix memory leaks in an Ember application without help!
 
-[Prev: Exercise #4](./exercise-4.md)
+[Prev: Exercise #4](./exercise-4.md) | [Next: Answer Key](./exercise-answer-key.md)

@@ -29,10 +29,11 @@ out where the leak is happening in the actual code.
 
 There are two things to note in the above:
 
-First, we're interested in `_this` was retained by `context in ()`: When you encounter a pattern
-like this for the first time, it can look very odd. The `_this` is a variable
-introduced during transpilation by Babel. The `context in ()` is telling us that
-`_this` is retained in context by an anonymous function.
+First, we're interested in `_this`, which was retained by `context in ()`.
+When you encounter a pattern like this for the first time, it can look very odd.
+The `_this` is a variable introduced during transpilation by Babel. The
+`context in ()` is telling us that `_this` is retained in context by an
+anonymous function.
 
 In other words, our original code:
 
@@ -63,10 +64,10 @@ Which should make it obvious how `_this` is retained by the context of an
 anonymous function. This should not be happening, we don't want this to stay
 around after the life of the component.
 
-Second, you can hover to link to code: Once we identified an area of interest,
-we were able to hover over the `context in ()` phrase and link to the exact spot
-in the code where it was occuring. This is very useful for debugging retainers
-that are in context/scope.
+Second, note that you can hover to link to code. Once we have identified an area
+of interest, we are able to hover over the `context in ()` phrase and link
+the exact spot in the code where it occurred. This is very useful for debugging
+retainers that are in context/scope.
 
 ## Fixing the Leak
 
@@ -75,7 +76,7 @@ listeners and interval timers are retained by reference elsewhere, you
 must be careful to unregister them when no longer needed or ensure that
 the context they're registered with is destroyed. In this case, Since
 `window` is never destroyed/removed, this callback will continue to
-exist forever and since its callback closes over a reference to this
+exist forever, and since its callback closes over a reference to this
 component, we have a bad memory leak. The solution is to remove this
 event listener in `willDestroy`.
 
@@ -109,8 +110,8 @@ before. To dig into that, we'll move to the next exercise.
 
 ## Key Takeaways
 
-* Be careful when registering callbacks; ensure they get cleaned up
-* Sometimes memory leaks just by being in context/scope of a retained function
-* There may be more than one thing leaking a given object
+* Be careful when registering callbacks; ensure they get cleaned up.
+* Sometimes memory leaks just by being in context/scope of a retained function.
+* There may be more than one thing leaking a given object.
 
 [Prev: Exercise #1](./exercise-1.md) | [Next: Exercise #3](./exercise-3.md)
