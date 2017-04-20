@@ -143,7 +143,7 @@ indefinitely.
 > It is worth noting that this is primarily a problem since Object's are
 > non-primitive values, meaning that as we modify them, the value isn't replaced.
 > For primitive values, if we modify them on an instance of a class, it will no
-> longer be modiyfing the `prototype`, but will instead modify the instance
+> longer be modifying the `prototype`, but will instead modify the instance
 > directly.
 
 So, how do we fix this? Thankfully, it is easy, all we need to do is set `_data`
