@@ -1,12 +1,11 @@
-import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('controller:application', 'Unit | Controller | application', {
-  needs: [
-    'service:shared-storage'
-  ]
-});
+module('Unit | Controller | application', function(hooks) {
+  setupTest(hooks);
 
-test('it exists', function(assert) {
-  let controller = this.subject();
-  assert.ok(controller);
+  test('it exists', function(assert) {
+    let controller = this.owner.lookup('controller:application');
+    assert.ok(controller);
+  });
 });

@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import populateStore from '../mock-data';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    let store = this.get('store');
+    let store = this.store;
     populateStore(store);
 
     let user = store.peekRecord('user', '1337');

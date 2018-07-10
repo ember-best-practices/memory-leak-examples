@@ -1,18 +1,13 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
-const {
-  inject: {
-    service
-  }
-} = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   storage: service('shared-storage'),
 
   init() {
     this._super(...arguments);
 
     // Save the application controller for use with other things
-    this.get('storage').set('application-controller', this);
+    this.storage.set('application-controller', this);
   }
 });

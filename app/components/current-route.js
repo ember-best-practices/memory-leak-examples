@@ -1,20 +1,13 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { readOnly } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 
-const {
-  computed: {
-    readOnly
-  },
-  inject: {
-    service
-  }
-} = Ember;
-
-export default Ember.Component.extend({
+export default Component.extend({
   storage: service('shared-storage'),
 
   init() {
     this._super(...arguments);
-    this.set('appController', this.get('storage').get('application-controller'));
+    this.set('appController', this.storage.get('application-controller'));
   },
 
   currentRoute: readOnly('appController.currentPath')
