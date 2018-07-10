@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import config from '../config/environment';
 
-Ember.Component.reopen({
+Component.reopen({
   init() {
+    this._super(...arguments);
+
     let component = this;
-    component._super(...arguments);
 
     if (config.environment !== 'production') {
       let id = component.toString();

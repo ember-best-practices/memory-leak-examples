@@ -1,13 +1,5 @@
-import Ember from 'ember';
-
-const {
-  String: {
-    capitalize
-  },
-  Helper: {
-    helper
-  }
-} = Ember;
+import { capitalize } from '@ember/string';
+import { helper } from '@ember/component/helper';
 
 export function capitalizeHelper([str]) {
   return capitalize(str);
