@@ -1,28 +1,31 @@
-import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('service:shared-storage', 'Unit | Service | shared storage');
+module('Unit | Service | shared storage', function(hooks) {
+  setupTest(hooks);
 
-test('smoke test', function(assert) {
-  let service = this.subject();
+  test('smoke test', function(assert) {
+    let service = this.owner.lookup('service:shared-storage');
 
-  service.set('subject', service);
-  service.set('falsy', '');
+    service.set('subject', service);
+    service.set('falsy', '');
 
-  assert.strictEqual(service.get('subject'), service, 'set/get - works for truthy values');
-  assert.strictEqual(service.get('falsy'), '', 'set/get - works for falsy values');
+    assert.strictEqual(service.get('subject'), service, 'set/get - works for truthy values');
+    assert.strictEqual(service.get('falsy'), '', 'set/get - works for falsy values');
 
-  assert.strictEqual(service.has('subject'), true, 'has - works for truthy values');
-  assert.strictEqual(service.has('falsy'), true, 'has - works for false values');
+    assert.strictEqual(service.has('subject'), true, 'has - works for truthy values');
+    assert.strictEqual(service.has('falsy'), true, 'has - works for false values');
 
-  service.remove('subject');
-  service.remove('falsy');
+    service.remove('subject');
+    service.remove('falsy');
 
-  assert.strictEqual(service.has('subject'), false, 'remove - works for truthy values');
-  assert.strictEqual(service.has('falsy'), false, 'remove - works for false values');
+    assert.strictEqual(service.has('subject'), false, 'remove - works for truthy values');
+    assert.strictEqual(service.has('falsy'), false, 'remove - works for false values');
 
-  service.set('subject', service);
-  service.set('falsy', '');
+    service.set('subject', service);
+    service.set('falsy', '');
 
-  assert.strictEqual(service.get('subject'), service, 'set/get - works for reinstated truthy values');
-  assert.strictEqual(service.get('falsy'), '', 'set/get - works for reinstated falsy values');
+    assert.strictEqual(service.get('subject'), service, 'set/get - works for reinstated truthy values');
+    assert.strictEqual(service.get('falsy'), '', 'set/get - works for reinstated falsy values');
+  });
 });

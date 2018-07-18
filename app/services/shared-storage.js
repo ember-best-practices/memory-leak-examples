@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Service from '@ember/service';
 
-export default Ember.Service.extend({
+export default Service.extend({
   _data: Object.create(null),
 
   set(key, value) {

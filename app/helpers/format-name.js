@@ -1,12 +1,5 @@
-import Ember from 'ember';
-
-const {
-  get,
-  Map,
-  Helper: {
-    helper
-  }
-} = Ember;
+import { get } from '@ember/object';
+import { helper } from '@ember/component/helper';
 const cache = new Map();
 
 export function formatName([user]) {

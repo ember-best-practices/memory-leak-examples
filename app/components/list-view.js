@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
   didInsertElement() {
-    if (this.get('onScroll')) {
-      window.addEventListener('scroll', (...args) => this.get('onScroll')(...args));
+    if (this.onScroll) {
+      window.addEventListener('scroll', (...args) => this.onScroll(...args));
     }
   }
 });
